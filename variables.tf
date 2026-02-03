@@ -33,14 +33,6 @@ variable "security_group_name" {
   default     = "wordpress-sg"
 }
 
-
-
-
-
-
-
-
-
 variable "instance_name" {
   type        = string
   description = "Name of the ECS instance"

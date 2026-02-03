@@ -7,11 +7,6 @@ Terraform 阿里云 CentOS 到 Alinux 操作系统迁移模块
 
 本 Terraform 模块实现了[CentOS到Alinux操作系统迁移](https://www.aliyun.com/solution/tech-solution/centos-alinux)解决方案，涉及专有网络（VPC）、交换机（VSwitch）、云服务器（ECS）等资源的创建和部署，以及在 CentOS 7 系统上自动安装 WordPress。
 
-该模块创建完整的基础设施设置，包括：
-- 用于网络隔离的 VPC 和 VSwitch
-- 带有 HTTP/HTTPS 访问规则的安全组
-- 使用 CentOS 7 镜像的 ECS 实例
-- 通过 ECS 命令和调用实现的自动化 WordPress 安装
 
 ## 用法
 
@@ -59,18 +54,6 @@ module "centos_alinux_migration" {
 }
 ```
 
-## 从CentOS到AlmaLinux的迁移
-
-本模块在CentOS上设置WordPress环境，这可以作为迁移到AlmaLinux的起点。WordPress安装脚本处理以下内容：
-
-1. 环境准备
-2. Nginx安装和配置
-3. MySQL安装和设置
-4. PHP安装和配置
-5. WordPress安装和配置
-
-初始设置完成后，您可以按照官方AlmaLinux迁移指南继续执行从CentOS到AlmaLinux的迁移过程。
-
 ## 示例
 
 * [完整示例](https://github.com/alibabacloud-automation/terraform-alicloud-centos-alinux-migration/tree/main/examples/complete)
@@ -87,7 +70,7 @@ module "centos_alinux_migration" {
 
 | Name | Version |
 |------|---------|
-| <a name="provider_alicloud"></a> [alicloud](#provider\_alicloud) | 1.269.0 |
+| <a name="provider_alicloud"></a> [alicloud](#provider\_alicloud) | >= 1.220.0 |
 
 ## Modules
 

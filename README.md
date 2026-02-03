@@ -6,12 +6,6 @@ English | [简体中文](https://github.com/alibabacloud-automation/terraform-al
 
 This Terraform module implements the [CentOS to Alinux Operating System Migration](https://www.aliyun.com/solution/tech-solution/centos-alinux) solution, involving the creation and deployment of resources such as Virtual Private Cloud (VPC), Virtual Switch (VSwitch), Elastic Compute Service (ECS), and automatic WordPress installation on CentOS 7 systems.
 
-This module creates a complete infrastructure setup, including:
-- VPC and VSwitch for network isolation
-- Security groups with HTTP/HTTPS access rules
-- ECS instances using CentOS 7 images
-- Automated WordPress installation through ECS commands and invocations
-
 ## Usage
 
 ```hcl
@@ -58,18 +52,6 @@ module "centos_alinux_migration" {
 }
 ```
 
-## Migrating from CentOS to AlmaLinux
-
-This module sets up a WordPress environment on CentOS, which can serve as a starting point for migration to AlmaLinux. The WordPress installation script handles the following:
-
-1. Environment preparation
-2. Nginx installation and configuration
-3. MySQL installation and setup
-4. PHP installation and configuration
-5. WordPress installation and configuration
-
-After the initial setup is complete, you can continue with the migration process from CentOS to AlmaLinux following the official AlmaLinux migration guide.
-
 ## Examples
 
 * [Complete Example](https://github.com/alibabacloud-automation/terraform-alicloud-centos-alinux-migration/tree/main/examples/complete)
@@ -86,7 +68,7 @@ After the initial setup is complete, you can continue with the migration process
 
 | Name | Version |
 |------|---------|
-| <a name="provider_alicloud"></a> [alicloud](#provider\_alicloud) | 1.269.0 |
+| <a name="provider_alicloud"></a> [alicloud](#provider\_alicloud) | >= 1.220.0 |
 
 ## Modules
 
